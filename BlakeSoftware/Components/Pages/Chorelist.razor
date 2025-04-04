@@ -1,11 +1,11 @@
-﻿@page "/weather"
+﻿@page "/Chorelist"
 @attribute [StreamRendering]
 
-<PageTitle>Weather</PageTitle>
+<PageTitle>Chore List</PageTitle>
 
-<h1>Weather</h1>
+<h1>Chore List</h1>
 
-<p>This component demonstrates showing data.</p>
+<p>Blake's Chore list</p>
 
 @if (forecasts == null)
 {
@@ -16,22 +16,19 @@ else
     <table class="table">
         <thead>
             <tr>
-                <th>Date</th>
-                <th>Temp. (C)</th>
-                <th>Temp. (F)</th>
-                <th>Summary</th>
+                <th>Chore</th>
+                <th>Price</th>
             </tr>
         </thead>
         <tbody>
-            @foreach (var forecast in forecasts)
-            {
                 <tr>
-                    <td>@forecast.Date.ToShortDateString()</td>
-                    <td>@forecast.TemperatureC</td>
-                    <td>@forecast.TemperatureF</td>
-                    <td>@forecast.Summary</td>
+                    <td>Pooper Scooping</td>
+                    <td>$10</td>
                 </tr>
-            }
+                <tr>
+                    <td>Gigi Chores</td>
+                    <td>$10</td>
+                </tr>
         </tbody>
     </table>
 }
